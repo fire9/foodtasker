@@ -9,6 +9,10 @@
     <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
   </head>
   <body>
-    <h1>Hello, Python!</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form }}
+      <button type="submit">Sign In</button>
+    </form>
   </body>
 </html>
